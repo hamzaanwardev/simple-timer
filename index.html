@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Timer</title>
+</head>
+<body>
+    <!-- <div class='timer' data-minutes-left=3 style="border: 2px solid green;"></div>
+<div class='timer' data-seconds-left=180 style="border: 2px solid red;"></div> -->
+
+<div class="timer jst-timeout" data-seconds-left="3">
+    <div class="jst-hours">01:</div>
+    <div class="jst-minutes">30:</div>
+    <div class="jst-seconds">30</div>
+    <div class="jst-clearDiv"></div>
+  </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.simple.timer.js"></script>
+    <script>
+        // $(document).ready(function(){
+        //     $('.timer').startTimer();
+        // });
+        $('.timer').startTimer({
+    classNames: {
+    hours: 'myClass-hours',
+    minutes: 'myClass-minutes',
+    seconds: 'myClass-seconds',
+    clearDiv: 'myClass-clearDiv',
+    timeout: 'myClass-timeout'
+  }
+});
+    </script>
+
+</body>
+</html>
